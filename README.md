@@ -1,2 +1,2 @@
-# challenge faixa de ceps por unidade
+# challenge faixa de CEP por loja
 
