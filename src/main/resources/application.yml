@@ -1,0 +1,42 @@
+spring:
+  application.name: challenge-api
+
+  datasource:
+    url:
+    driver-class-name: oracle.jdbc.OracleDriver
+    username:
+    password:
+  jpa:
+    properties.hibernate.dialect: org.hibernate.dialect.Oracle12cDialect
+    hibernate.ddl-auto: none
+    show-sql: true
+    open-in-view: false
+
+info.app.name: ${spring.application.name}
+
+logging:
+  level:
+    root: INFO
+
+server:
+  address: 0.0.0.0
+  port: 8080
+  servlet.context-path: /api/
+
+management:
+  server:
+    address: 0.0.0.0
+    port: 8081
+  endpoint:
+    health:
+      enabled: true
+  endpoints:
+    enabled-by-default: false
+    web:
+      base-path: /
+
+springdoc:
+  swagger-ui:
+    path: /swagger-ui
+  api-docs:
+    path: /api-docs
